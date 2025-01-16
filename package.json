@@ -1,0 +1,22 @@
+{
+    "name": "gokartcentrealentest",
+    "version": "1.0.0",
+    "description": "Gokart Center Application",
+    "main": "app.js",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "greenlock-express": "^4.0.3",
+        "sqlite3": "^5.1.7"
+    },
+    "scripts": {
+        "start": "node app.js",
+        "test": "echo \"No tests specified\" && exit 0"
+    },
+    "keywords": ["nodejs", "express", "gokart"],
+    "author": "",
+    "license": "ISC"
+}

@@ -1,0 +1,796 @@
+2025-01-07 19:16:48: Error cleaning up database files: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-07 19:16:48:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-07 19:16:48:     at cleanupDatabase (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:14:16)
+2025-01-07 19:16:48:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:35:1)
+2025-01-07 19:16:48:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:48:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-07 19:16:48:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-07 19:16:48:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-07 19:16:48:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-07 19:16:48:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:48:     at Object..js (node:internal/modules/cjs/loader:1708:10) {
+2025-01-07 19:16:48:   errno: -4082,
+2025-01-07 19:16:48:   code: 'EBUSY',
+2025-01-07 19:16:48:   syscall: 'unlink',
+2025-01-07 19:16:48:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-07 19:16:48: }
+2025-01-07 19:16:49: Error: listen EADDRINUSE: address already in use :::3000
+2025-01-07 19:16:49:     at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+2025-01-07 19:16:49:     at listenInCluster (node:net:1969:12)
+2025-01-07 19:16:49:     at Server.listen (node:net:2074:7)
+2025-01-07 19:16:49:     at Function.listen (C:\Users\Administrator\Desktop\gokartcentrealentest\node_modules\express\lib\application.js:635:24)
+2025-01-07 19:16:49:     at C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:295:13 {
+2025-01-07 19:16:49:   code: 'EADDRINUSE',
+2025-01-07 19:16:49:   errno: -4091,
+2025-01-07 19:16:49:   syscall: 'listen',
+2025-01-07 19:16:49:   address: '::',
+2025-01-07 19:16:49:   port: 3000
+2025-01-07 19:16:49: }
+2025-01-07 19:16:53: Error cleaning up database files: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-07 19:16:53:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-07 19:16:53:     at cleanupDatabase (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:14:16)
+2025-01-07 19:16:53:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:35:1)
+2025-01-07 19:16:53:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:53:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-07 19:16:53:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-07 19:16:53:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-07 19:16:53:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-07 19:16:53:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:53:     at Object..js (node:internal/modules/cjs/loader:1708:10) {
+2025-01-07 19:16:53:   errno: -4082,
+2025-01-07 19:16:53:   code: 'EBUSY',
+2025-01-07 19:16:53:   syscall: 'unlink',
+2025-01-07 19:16:53:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-07 19:16:53: }
+2025-01-07 19:16:53: Error: listen EADDRINUSE: address already in use :::3000
+2025-01-07 19:16:53:     at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+2025-01-07 19:16:53:     at listenInCluster (node:net:1969:12)
+2025-01-07 19:16:53:     at Server.listen (node:net:2074:7)
+2025-01-07 19:16:53:     at Function.listen (C:\Users\Administrator\Desktop\gokartcentrealentest\node_modules\express\lib\application.js:635:24)
+2025-01-07 19:16:53:     at C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:295:13 {
+2025-01-07 19:16:53:   code: 'EADDRINUSE',
+2025-01-07 19:16:53:   errno: -4091,
+2025-01-07 19:16:53:   syscall: 'listen',
+2025-01-07 19:16:53:   address: '::',
+2025-01-07 19:16:53:   port: 3000
+2025-01-07 19:16:53: }
+2025-01-07 19:16:57: Error cleaning up database files: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-07 19:16:57:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-07 19:16:57:     at cleanupDatabase (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:14:16)
+2025-01-07 19:16:57:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:35:1)
+2025-01-07 19:16:57:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:57:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-07 19:16:57:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-07 19:16:57:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-07 19:16:57:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-07 19:16:57:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-07 19:16:57:     at Object..js (node:internal/modules/cjs/loader:1708:10) {
+2025-01-07 19:16:57:   errno: -4082,
+2025-01-07 19:16:57:   code: 'EBUSY',
+2025-01-07 19:16:57:   syscall: 'unlink',
+2025-01-07 19:16:57:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-07 19:16:57: }
+2025-01-07 19:16:58: Error: listen EADDRINUSE: address already in use :::3000
+2025-01-07 19:16:58:     at Server.setupListenHandle [as _listen2] (node:net:1912:16)
+2025-01-07 19:16:58:     at listenInCluster (node:net:1969:12)
+2025-01-07 19:16:58:     at Server.listen (node:net:2074:7)
+2025-01-07 19:16:58:     at Function.listen (C:\Users\Administrator\Desktop\gokartcentrealentest\node_modules\express\lib\application.js:635:24)
+2025-01-07 19:16:58:     at C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:295:13 {
+2025-01-07 19:16:58:   code: 'EADDRINUSE',
+2025-01-07 19:16:58:   errno: -4091,
+2025-01-07 19:16:58:   syscall: 'listen',
+2025-01-07 19:16:58:   address: '::',
+2025-01-07 19:16:58:   port: 3000
+2025-01-07 19:16:58: }
+2025-01-08T00:03:31: ReferenceError: app is not defined
+2025-01-08T00:03:31:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:1)
+2025-01-08T00:03:31:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:31:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:31:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:31:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:31:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:31:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+2025-01-08T00:03:31:     at Module.<anonymous> (node:internal/modules/cjs/loader:1340:12)
+2025-01-08T00:03:31:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:101:39)
+2025-01-08T00:03:31:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:34: ReferenceError: app is not defined
+2025-01-08T00:03:34:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:1)
+2025-01-08T00:03:34:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:34:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:34:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:34:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:34:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:34:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+2025-01-08T00:03:34:     at Module.<anonymous> (node:internal/modules/cjs/loader:1340:12)
+2025-01-08T00:03:34:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:101:39)
+2025-01-08T00:03:34:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:37: ReferenceError: app is not defined
+2025-01-08T00:03:37:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:1)
+2025-01-08T00:03:37:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:37:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:37:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:37:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:37:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:37:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+2025-01-08T00:03:37:     at Module.<anonymous> (node:internal/modules/cjs/loader:1340:12)
+2025-01-08T00:03:37:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:101:39)
+2025-01-08T00:03:37:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:41: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:03:41: Require stack:
+2025-01-08T00:03:41: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:03:41: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:03:41:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:03:41:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:03:41:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:41:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:03:41:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:41:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:41:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:41:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:41:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:41:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:03:41:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:03:41:   requireStack: [
+2025-01-08T00:03:41:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:03:41:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:03:41:   ]
+2025-01-08T00:03:41: }
+2025-01-08T00:03:45: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:03:45: Require stack:
+2025-01-08T00:03:45: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:03:45: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:03:45:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:03:45:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:03:45:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:45:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:03:45:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:45:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:45:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:45:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:45:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:45:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:03:45:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:03:45:   requireStack: [
+2025-01-08T00:03:45:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:03:45:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:03:45:   ]
+2025-01-08T00:03:45: }
+2025-01-08T00:03:49: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:03:49: Require stack:
+2025-01-08T00:03:49: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:03:49: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:03:49:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:03:49:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:03:49:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:49:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:03:49:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:49:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:49:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:49:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:49:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:49:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:03:49:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:03:49:   requireStack: [
+2025-01-08T00:03:49:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:03:49:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:03:49:   ]
+2025-01-08T00:03:49: }
+2025-01-08T00:03:53: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:03:53: Require stack:
+2025-01-08T00:03:53: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:03:53: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:03:53:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:03:53:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:03:53:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:53:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:03:53:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:53:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:53:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:53:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:53:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:53:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:03:53:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:03:53:   requireStack: [
+2025-01-08T00:03:53:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:03:53:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:03:53:   ]
+2025-01-08T00:03:53: }
+2025-01-08T00:03:58: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:03:58: Require stack:
+2025-01-08T00:03:58: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:03:58: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:03:58:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:03:58:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:03:58:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:03:58:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:03:58:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:03:58:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:03:58:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:03:58:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:03:58:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:03:58:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:03:58:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:03:58:   requireStack: [
+2025-01-08T00:03:58:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:03:58:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:03:58:   ]
+2025-01-08T00:03:58: }
+2025-01-08T00:04:04: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:04:04: Require stack:
+2025-01-08T00:04:04: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:04:04: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:04:04:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:04:04:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:04:04:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:04:04:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:04:04:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:04:04:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:04:04:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:04:04:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:04:04:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:04:04:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:04:04:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:04:04:   requireStack: [
+2025-01-08T00:04:04:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:04:04:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:04:04:   ]
+2025-01-08T00:04:04: }
+2025-01-08T00:04:11: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:04:11: Require stack:
+2025-01-08T00:04:11: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:04:11: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:04:11:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:04:11:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:04:11:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:04:11:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:04:11:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:04:11:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:04:11:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:04:11:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:04:11:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:04:11:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:04:11:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:04:11:   requireStack: [
+2025-01-08T00:04:11:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:04:11:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:04:11:   ]
+2025-01-08T00:04:11: }
+2025-01-08T00:04:20: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:04:20: Require stack:
+2025-01-08T00:04:20: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:04:20: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:04:20:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:04:20:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:04:20:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:04:20:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:04:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:04:20:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:04:20:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:04:20:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:04:20:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:04:20:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:04:20:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:04:20:   requireStack: [
+2025-01-08T00:04:20:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:04:20:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:04:20:   ]
+2025-01-08T00:04:20: }
+2025-01-08T00:04:32: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:04:32: Require stack:
+2025-01-08T00:04:32: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:04:32: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:04:32:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:04:32:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:04:32:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:04:32:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:04:32:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:04:32:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:04:32:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:04:32:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:04:32:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:04:32:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:04:32:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:04:32:   requireStack: [
+2025-01-08T00:04:32:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:04:32:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:04:32:   ]
+2025-01-08T00:04:32: }
+2025-01-08T00:04:48: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:04:48: Require stack:
+2025-01-08T00:04:48: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:04:48: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:04:48:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:04:48:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:04:48:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:04:48:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:04:48:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:04:48:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:04:48:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:04:48:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:04:48:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:04:48:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:04:48:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:04:48:   requireStack: [
+2025-01-08T00:04:48:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:04:48:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:04:48:   ]
+2025-01-08T00:04:48: }
+2025-01-08T00:05:06: Error: Cannot find module 'greenlock-express'
+2025-01-08T00:05:06: Require stack:
+2025-01-08T00:05:06: - C:\Users\Administrator\Desktop\gokartcentrealentest\app.js
+2025-01-08T00:05:06: - C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js
+2025-01-08T00:05:06:     at Function._resolveFilename (node:internal/modules/cjs/loader:1249:15)
+2025-01-08T00:05:06:     at Hook._require.Module.require (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\node_modules\require-in-the-middle\index.js:81:25)
+2025-01-08T00:05:06:     at require (node:internal/modules/helpers:138:16)
+2025-01-08T00:05:06:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\app.js:4:19)
+2025-01-08T00:05:06:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:05:06:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:05:06:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:05:06:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:05:06:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+2025-01-08T00:05:06:     at wrapModuleLoad (node:internal/modules/cjs/loader:219:24) {
+2025-01-08T00:05:06:   code: 'MODULE_NOT_FOUND',
+2025-01-08T00:05:06:   requireStack: [
+2025-01-08T00:05:06:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\app.js',
+2025-01-08T00:05:06:     'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\startup.js'
+2025-01-08T00:05:06:   ]
+2025-01-08T00:05:06: }
+2025-01-08T00:05:40: (node:3860) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:05:40: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:05:40: 
+2025-01-08T00:05:40: <--- Last few GCs --->
+2025-01-08T00:05:40: 
+2025-01-08T00:05:40: [3860:000002C167D45000]     1401 ms: Scavenge 13.0 (17.7) -> 10.4 (18.2) MB, pooled: 0 MB, 1.64 / 0.00 ms  (average mu = 1.000, current mu = 1.000) allocation failure; 
+2025-01-08T00:05:40: [3860:000002C167D45000]     1415 ms: Mark-Compact 10.8 (18.2) -> 9.3 (19.0) MB, pooled: 0 MB, 1.86 / 0.00 ms  (+ 6.7 ms in 0 steps since start of marking, biggest step 0.0 ms, walltime since start of marking 9 ms) (average mu = 0.994, current mu = 0.994) 
+2025-01-08T00:05:40: 
+2025-01-08T00:05:40: <--- JS stacktrace --->
+2025-01-08T00:05:40: 
+2025-01-08T00:05:40: FATAL ERROR: Zone Allocation failed - process out of memory
+2025-01-08T00:05:40: ----- Native stack trace -----
+2025-01-08T00:05:40: 
+2025-01-08T00:05:40:  1: 00007FF77E7CBA4B 
+2025-01-08T00:05:40:  2: 00007FF77E7353F8 
+2025-01-08T00:05:40:  3: 00007FF77F2C2D81 
+2025-01-08T00:05:40:  4: 00007FF77F2AFB86 
+2025-01-08T00:05:40:  5: 00007FF77ED7312E 
+2025-01-08T00:05:40:  6: 00007FF77EABC4DC 
+2025-01-08T00:05:40:  7: 00007FF77EABC597 
+2025-01-08T00:05:40:  8: 00007FF77EE1EBF7 
+2025-01-08T00:05:40:  9: 00007FF77EE1FD22 
+2025-01-08T00:05:40: 10: 00007FF77EE0D898 
+2025-01-08T00:05:40: 11: 00007FF77EE0C392 
+2025-01-08T00:05:40: 12: 00007FF77EE0A134 
+2025-01-08T00:05:40: 13: 00007FF77EDEF64D 
+2025-01-08T00:05:40: 14: 00007FF77EDEFABF 
+2025-01-08T00:05:40: 15: 00007FF77EDF013A 
+2025-01-08T00:05:40: 16: 00007FF77EDF112E 
+2025-01-08T00:05:40: 17: 00007FF77EDF0C3E 
+2025-01-08T00:05:40: 18: 00007FF77EDF06A0 
+2025-01-08T00:05:40: 19: 00007FF77EDCD702 
+2025-01-08T00:05:40: 20: 00007FF77F37DFDE 
+2025-01-08T00:05:40: 21: 00007FF77F412BE9 
+2025-01-08T00:05:40: 22: 00007FF77F2DE842 
+2025-01-08T00:05:40: 23: 00007FF77F2DE842 
+2025-01-08T00:05:40: 24: 00007FF77F2DE842 
+2025-01-08T00:05:40: 25: 00007FF77F2DE842 
+2025-01-08T00:05:40: 26: 00007FF6FF57D623 
+2025-01-08T00:05:56: (node:5192) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:05:56: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:05:56: 
+2025-01-08T00:05:56: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:05:56: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:05:56: 
+2025-01-08T00:06:13: (node:6608) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:06:13: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:06:13: 
+2025-01-08T00:06:13: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:06:13: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:06:13: 
+2025-01-08T00:06:29: (node:6100) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:06:29: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:06:29: 
+2025-01-08T00:06:29: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:06:29: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:06:29: 
+2025-01-08T00:06:46: (node:4428) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:06:46: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:06:46: 
+2025-01-08T00:06:46: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:06:46: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:06:46: 
+2025-01-08T00:07:03: (node:328) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:07:03: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:07:03: 
+2025-01-08T00:07:03: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:07:03: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:07:03: 
+2025-01-08T00:07:19: (node:3236) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:07:19: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:07:19: 
+2025-01-08T00:07:19: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:07:19: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:07:19: 
+2025-01-08T00:07:36: (node:1816) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:07:36: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:07:36: 
+2025-01-08T00:07:36: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:07:36: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:07:36: 
+2025-01-08T00:07:53: (node:8104) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:07:53: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:07:53: 
+2025-01-08T00:07:53: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:07:53: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:07:53: 
+2025-01-08T00:08:09: (node:3000) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:08:09: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:08:09: 
+2025-01-08T00:08:09: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:08:09: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:08:09: 
+2025-01-08T00:09:16: (node:6164) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:09:16: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:09:16: Warning: `find({})` returned 0 sites.
+2025-01-08T00:09:16:          Does `@greenlock/manager` implement `find({})`?
+2025-01-08T00:09:16:          Did you add sites?
+2025-01-08T00:09:16:          npx greenlock add --subject example.com --altnames example.com
+2025-01-08T00:09:33: (node:6716) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:09:33: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:09:33: Warning: `find({})` returned 0 sites.
+2025-01-08T00:09:33:          Does `@greenlock/manager` implement `find({})`?
+2025-01-08T00:09:33:          Did you add sites?
+2025-01-08T00:09:33:          npx greenlock add --subject example.com --altnames example.com
+2025-01-08T00:10:39: (node:4132) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:10:39: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:11:06: (node:3412) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:11:06: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:11:22: (node:2848) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:11:22: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:11:34: (node:5468) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:11:34: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:06: (node:2796) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:06: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:09: (node:972) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:09: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:12: (node:2152) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:12: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:16: (node:5608) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:16: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:21: (node:2768) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:21: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:24: (node:3324) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:24: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:27: (node:988) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:27: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:54: (node:900) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:54: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:12:58: (node:7032) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:12:58: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:13:01: (node:2660) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:13:01: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:13:58: (node:2040) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:13:58: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:01: (node:2928) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:01: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:17: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:17:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:17:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:17:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:17:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:17:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:17:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:17:   errno: -4082,
+2025-01-08T00:14:17:   code: 'EBUSY',
+2025-01-08T00:14:17:   syscall: 'unlink',
+2025-01-08T00:14:17:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:17: }
+2025-01-08T00:14:17: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:17:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:17:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:17:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:17:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:17:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:17:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:17:   errno: -4082,
+2025-01-08T00:14:17:   code: 'EBUSY',
+2025-01-08T00:14:17:   syscall: 'unlink',
+2025-01-08T00:14:17:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:17: }
+2025-01-08T00:14:17: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:17:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:17:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:17:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:17:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:17:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:17:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:17:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:17:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:17:   errno: -4082,
+2025-01-08T00:14:17:   code: 'EBUSY',
+2025-01-08T00:14:17:   syscall: 'unlink',
+2025-01-08T00:14:17:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:17: }
+2025-01-08T00:14:18: (node:6828) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:18: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:18: 
+2025-01-08T00:14:18: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:14:18: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:14:18: 
+2025-01-08T00:14:18: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:18:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:18:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:18:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:18:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:18:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:18:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:18:   errno: -4082,
+2025-01-08T00:14:18:   code: 'EBUSY',
+2025-01-08T00:14:18:   syscall: 'unlink',
+2025-01-08T00:14:18:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:18: }
+2025-01-08T00:14:18: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:18:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:18:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:18:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:18:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:18:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:18:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:18:   errno: -4082,
+2025-01-08T00:14:18:   code: 'EBUSY',
+2025-01-08T00:14:18:   syscall: 'unlink',
+2025-01-08T00:14:18:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:18: }
+2025-01-08T00:14:18: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:18:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:18:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:18:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:18:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:18:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:18:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:18:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:18:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:18:   errno: -4082,
+2025-01-08T00:14:18:   code: 'EBUSY',
+2025-01-08T00:14:18:   syscall: 'unlink',
+2025-01-08T00:14:18:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:18: }
+2025-01-08T00:14:20: (node:4372) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:20: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:20: 
+2025-01-08T00:14:20: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:14:20: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:14:20: 
+2025-01-08T00:14:20: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:20:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:20:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:20:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:20:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:20:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:20:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:20:   errno: -4082,
+2025-01-08T00:14:20:   code: 'EBUSY',
+2025-01-08T00:14:20:   syscall: 'unlink',
+2025-01-08T00:14:20:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:20: }
+2025-01-08T00:14:20: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:20:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:20:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:20:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:20:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:20:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:20:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:20:   errno: -4082,
+2025-01-08T00:14:20:   code: 'EBUSY',
+2025-01-08T00:14:20:   syscall: 'unlink',
+2025-01-08T00:14:20:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:20: }
+2025-01-08T00:14:20: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:20:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:20:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:20:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:20:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:20:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:20:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:20:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:20:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:20:   errno: -4082,
+2025-01-08T00:14:20:   code: 'EBUSY',
+2025-01-08T00:14:20:   syscall: 'unlink',
+2025-01-08T00:14:20:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:20: }
+2025-01-08T00:14:22: (node:5292) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:22: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:22: 
+2025-01-08T00:14:22: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:14:22: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:14:22: 
+2025-01-08T00:14:22: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:22:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:22:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:22:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:22:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:22:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:22:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:22:   errno: -4082,
+2025-01-08T00:14:22:   code: 'EBUSY',
+2025-01-08T00:14:22:   syscall: 'unlink',
+2025-01-08T00:14:22:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:22: }
+2025-01-08T00:14:22: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:22:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:22:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:22:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:22:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:22:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:22:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:22:   errno: -4082,
+2025-01-08T00:14:22:   code: 'EBUSY',
+2025-01-08T00:14:22:   syscall: 'unlink',
+2025-01-08T00:14:22:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:22: }
+2025-01-08T00:14:22: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:22:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:22:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:22:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:22:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:22:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:22:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:22:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:22:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:22:   errno: -4082,
+2025-01-08T00:14:22:   code: 'EBUSY',
+2025-01-08T00:14:22:   syscall: 'unlink',
+2025-01-08T00:14:22:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:22: }
+2025-01-08T00:14:24: (node:2752) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:24: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:24: 
+2025-01-08T00:14:24: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:14:24: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:14:24: 
+2025-01-08T00:14:25: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:25:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:25:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:25:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:25:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:25:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:25:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:25:   errno: -4082,
+2025-01-08T00:14:25:   code: 'EBUSY',
+2025-01-08T00:14:25:   syscall: 'unlink',
+2025-01-08T00:14:25:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:25: }
+2025-01-08T00:14:25: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:25:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:25:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:25:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:25:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:25:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:25:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:25:   errno: -4082,
+2025-01-08T00:14:25:   code: 'EBUSY',
+2025-01-08T00:14:25:   syscall: 'unlink',
+2025-01-08T00:14:25:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:25: }
+2025-01-08T00:14:25: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:25:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:25:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:25:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:25:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:25:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:25:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:25:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:25:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:25:   errno: -4082,
+2025-01-08T00:14:25:   code: 'EBUSY',
+2025-01-08T00:14:25:   syscall: 'unlink',
+2025-01-08T00:14:25:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:25: }
+2025-01-08T00:14:26: (node:6876) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2025-01-08T00:14:26: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-01-08T00:14:26: 
+2025-01-08T00:14:26: Error: listen EADDRINUSE: address already in use 0.0.0.0:80
+2025-01-08T00:14:26: EADDRINUSE: '0.0.0.0:80'
+2025-01-08T00:14:26: 
+2025-01-08T00:14:27: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db'
+2025-01-08T00:14:27:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:27:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:27:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:27:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:27:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:27:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:27:   errno: -4082,
+2025-01-08T00:14:27:   code: 'EBUSY',
+2025-01-08T00:14:27:   syscall: 'unlink',
+2025-01-08T00:14:27:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db'
+2025-01-08T00:14:27: }
+2025-01-08T00:14:27: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-shm'
+2025-01-08T00:14:27:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:27:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:27:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:27:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:27:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:27:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:27:   errno: -4082,
+2025-01-08T00:14:27:   code: 'EBUSY',
+2025-01-08T00:14:27:   syscall: 'unlink',
+2025-01-08T00:14:27:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-shm'
+2025-01-08T00:14:27: }
+2025-01-08T00:14:27: Error removing C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal: Error: EBUSY: resource busy or locked, unlink 'C:\Users\Administrator\Desktop\gokartcentrealentest\videostate.db-wal'
+2025-01-08T00:14:27:     at Object.unlinkSync (node:fs:1871:11)
+2025-01-08T00:14:27:     at removeFile (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:9:16)
+2025-01-08T00:14:27:     at cleanupDatabases (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:33:9)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\Desktop\gokartcentrealentest\startup.js:45:1)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14)
+2025-01-08T00:14:27:     at Object..js (node:internal/modules/cjs/loader:1708:10)
+2025-01-08T00:14:27:     at Module.load (node:internal/modules/cjs/loader:1318:32)
+2025-01-08T00:14:27:     at Function._load (node:internal/modules/cjs/loader:1128:12)
+2025-01-08T00:14:27:     at Object.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\pm2\lib\ProcessContainerFork.js:33:23)
+2025-01-08T00:14:27:     at Module._compile (node:internal/modules/cjs/loader:1565:14) {
+2025-01-08T00:14:27:   errno: -4082,
+2025-01-08T00:14:27:   code: 'EBUSY',
+2025-01-08T00:14:27:   syscall: 'unlink',
+2025-01-08T00:14:27:   path: 'C:\\Users\\Administrator\\Desktop\\gokartcentrealentest\\videostate.db-wal'
+2025-01-08T00:14:27: }
+2025-01-09T22:54:50: Error: Error: Command failed: pm2 restart gokart-app
+2025-01-09T22:54:50: 
+2025-01-09T22:56:10: Error: Error: Command failed: pm2 restart gokart-app
+2025-01-09T22:56:10: 

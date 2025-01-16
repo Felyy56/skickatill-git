@@ -1,0 +1,69 @@
+
+### Project Description
+
+#### Objective:
+The goal is to optimize the video player and client-server communication to improve performance, 
+enhance video quality, and ensure faster and more reliable interactions. 
+This includes backend and server optimization, and make so all my functions work flawlessly! 
+
+
+
+### How to Start the Website
+
+1. Run the server:
+
+   node app.js
+
+2. Open the following URLs in your browser:
+   - Main video player: http://localhost:3000
+   - Controller page: http://localhost:3000/controller (open this in a new tab or window).
+3. On the controller page:
+   - Use the two green buttons to select a language, which will trigger different videos.
+4. To access the secret admin menu:
+   - Tap three times quickly on the bottom-right corner of the screen.
+5. Test all the buttons and observe their functionality.
+6. Open the admin page: `http://localhost:3000/admin`.
+   - The test password is `1234`
+   - Test all the buttons here as well and observe their effects on the video player at http://localhost:3000.
+
+
+
+### Observed Issues
+
+- The server communication is unreliable. For example:
+  - Buttons often require multiple presses to trigger an action, especially the playback and play-forward buttons.
+- This system will operate 12 hours a day, 365 days a year, so it must function flawlessly.
+- The video player will be displayed on a Samsung TV browser. Therefore:
+  - The web app must work seamlessly on any device.
+  - It should be fully compatible with touchscreens and function flawlessly across all platforms.
+
+
+
+### Requirements
+
+1. Optimize Server Communication:
+   - Ensure that all buttons respond reliably on the first press.
+   - Improve the speed and reliability of interactions between the client and server.
+
+2. Enhance Video Player Performance:
+   - Optimize the video player for smooth playback and minimal latency.
+   - Ensure compatibility with Samsung TV browsers and touchscreens.
+
+3. General Improvements:
+   - Test and debug the system to ensure it operates flawlessly under continuous use.
+   - Ensure cross-platform compatibility and consistent behavior across devices.
+
+
+
+### File Structure
+
+- index.html: Main video player page.
+- /controller: Controller page.
+- /admin: Admin page.
+
+I run express nodejs server with sqlite3 database.
+
+
+
+
+

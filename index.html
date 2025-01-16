@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        /* Landing Page */
+        #gokart-landing {
+            --primary-color: #00ff00;
+            --text-color: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            z-index: 2;
+        }
+
+        #gokart-landing .landing-container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        #gokart-landing .main-title {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--text-color);
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        #gokart-landing .subtitle {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        #gokart-landing .bounce-arrow {
+            color: var(--text-color);
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        /* Video Player */
+        #videoPlayer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            color: white;
+        }
+
+        .click-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="gokart-landing">
+        <div class="landing-container">
+            <h1 class="main-title" data-aos="zoom-in">
+                Welcome to <span style="color: var(--primary-color);">test site</span>
+            </h1>
+            <h2 class="subtitle" data-aos="fade-up" data-aos-delay="300">
+                Please Select Language on Controller
+            </h2>
+            <i class="fas fa-chevron-down bounce-arrow" data-aos="fade-up" data-aos-delay="600"></i>
+        </div>
+    </div>
+
+    <!-- Video Player -->
+    <div id="loadingOverlay" class="loading-overlay">Laddar...</div>
+    <div id="clickOverlay" class="click-overlay hidden">Klicka var som helst för att aktivera ljud</div>
+    <video id="videoPlayer">
+        <source src="sweop.mp4" type="video/mp4" preload="auto">
+    </video>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+// Initialize AOS animation library
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+
+
+// Get DOM elements
+const videoPlayer = document.getElementById('videoPlayer');
+const landingPage = document.getElementById('gokart-landing');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const clickOverlay = document.getElementById('clickOverlay');
+
+// Initialize state tracking with autoplay flag
+let lastState = {
+    currentVideo: null,
+    isPlaying: false,
+    volume: 100,
+    currentTime: 0,
+    autoplayRequested: false
+};
+
+// Set initial video state
+videoPlayer.muted = true;
+
+// Ensure landing page is visible initially
+landingPage.classList.remove('hidden');
+
+// Comprehensive video cleanup function for TV browser compatibility
+function forceVideoCleanup() {
+    // Force stop all video activity
+    videoPlayer.pause();
+    videoPlayer.muted = true;
+    videoPlayer.currentTime = 0;
+    
+    // Remove and recreate video source
+    const currentSrc = videoPlayer.querySelector('source').src;
+    videoPlayer.innerHTML = '';
+    const newSource = document.createElement('source');
+    newSource.src = currentSrc;
+    newSource.type = 'video/mp4';
+    videoPlayer.appendChild(newSource);
+    
+    // Force browser to garbage collect the video buffer
+    videoPlayer.load();
+}
+
+
+// Autoplay handling
+async function attemptAutoplay() {
+    try {
+        videoPlayer.muted = false;
+        const playPromise = videoPlayer.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Unmuted autoplay failed, trying muted:', error);
+                videoPlayer.muted = true;
+                clickOverlay.classList.remove('hidden');
+                videoPlayer.play().catch(e => {
+                    console.error('Muted autoplay also failed:', e);
+                    loadingOverlay.classList.remove('hidden');
+                });
+            });
+        }
+    } catch (error) {
+        console.error('Autoplay attempt failed:', error);
+    }
+}
+
+// Server communication function
+async function updateServerState(updates) {
+    try {
+        const response = await fetch('http://localhost:3000/updateState', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(updates)
+        });
+
+        if (!response.ok) {
+            throw new Error('Failed to update state');
+        }
+    } catch (error) {
+        console.error('Error updating state:', error);
+    }
+}
+
+
+// Main sync function
+async function syncWithServer() {
+    try {
+        const response = await fetch('http://localhost:3000/getState');
+        if (!response.ok) throw new Error('Server error');
+        
+        const state = await response.json();
+
+        // Handle video end state
+        if (videoPlayer.ended || videoPlayer.currentTime >= videoPlayer.duration) {
+            forceVideoCleanup();
+            landingPage.classList.remove('hidden');
+            return;
+        }
+        
+        // Handle video changes and play state
+        if (state.currentVideo !== lastState.currentVideo) {
+            const videoFile = `${state.currentVideo === 1 ? 'sweop' : 'engop'}.mp4`;
+            
+            if (state.isPlaying) {
+                landingPage.classList.add('hidden');
+                if (videoPlayer.src.indexOf(videoFile) === -1) {
+                    loadingOverlay.classList.remove('hidden');
+                    forceVideoCleanup();
+                    videoPlayer.querySelector('source').src = videoFile;
+                    videoPlayer.load();
+                    lastState.autoplayRequested = true;
+                }
+                videoPlayer.currentTime = 0;
+                // Let attemptAutoplay handle the muting state
+                attemptAutoplay();
+            }
+        } else if (state.isPlaying !== lastState.isPlaying) {
+            if (state.isPlaying) {
+                landingPage.classList.add('hidden');
+                if (!videoPlayer.muted) {
+                    // If already unmuted, just play
+                    videoPlayer.play().catch(error => {
+                        console.error('Play failed:', error);
+                        // If play fails, try attemptAutoplay as fallback
+                        attemptAutoplay();
+                    });
+                } else {
+                    // If muted, use attemptAutoplay
+                    attemptAutoplay();
+                }
+            } else {
+                if (!videoPlayer.ended) {
+                    videoPlayer.pause();
+                }
+            }
+        }
+        
+        // Handle volume changes
+        if (state.volume !== lastState.volume) {
+            videoPlayer.volume = state.volume / 100;
+        }
+        
+        // Handle time synchronization
+        if (state.currentVideo === lastState.currentVideo) {
+            const timeDiff = Math.abs(videoPlayer.currentTime - state.currentTime);
+            if (timeDiff > 1 || state.seek) {
+                const wasPlaying = !videoPlayer.paused;
+                videoPlayer.currentTime = state.currentTime;
+                if (wasPlaying && state.isPlaying) {
+                    if (!videoPlayer.muted) {
+                        videoPlayer.play().catch(() => attemptAutoplay());
+                    } else {
+                        attemptAutoplay();
+                    }
+                }
+            }
+        }
+        
+        lastState = { ...state };
+        
+    } catch (error) {
+        console.error('Sync error:', error);
+    }
+}
+
+// Video event listeners
+videoPlayer.addEventListener('loadeddata', () => {
+    loadingOverlay.classList.add('hidden');
+    if (lastState.autoplayRequested && lastState.isPlaying) {
+        attemptAutoplay();
+    }
+});
+
+// Enhanced video end handler for TV browsers
+videoPlayer.addEventListener('ended', async function handleVideoEnd() {
+    // Immediate cleanup
+    forceVideoCleanup();
+    
+    // Show landing page
+    landingPage.classList.remove('hidden');
+    
+    // Update server
+    await updateServerState({
+        isPlaying: false,
+        currentTime: 0
+    });
+    
+    // Secondary cleanup check
+    setTimeout(forceVideoCleanup, 100);
+    
+    // Final cleanup check
+    setTimeout(() => {
+        if (!videoPlayer.paused || !videoPlayer.muted) {
+            forceVideoCleanup();
+        }
+    }, 500);
+});
+
+videoPlayer.addEventListener('timeupdate', () => {
+    if (!videoPlayer.paused && !videoPlayer.seeking) {
+        updateServerState({
+            currentTime: videoPlayer.currentTime,
+            isPlaying: true
+        });
+    }
+});
+
+videoPlayer.addEventListener('seeking', () => {
+    updateServerState({
+        currentTime: videoPlayer.currentTime,
+        seek: true
+    });
+});
+
+videoPlayer.addEventListener('seeked', () => {
+    updateServerState({
+        currentTime: videoPlayer.currentTime,
+        isPlaying: !videoPlayer.paused
+    });
+});
+
+videoPlayer.addEventListener('play', () => {
+    updateServerState({ isPlaying: true });
+});
+
+videoPlayer.addEventListener('pause', () => {
+    // Only update server if this wasn't triggered by video end
+    if (!videoPlayer.ended) {
+        updateServerState({ isPlaying: false });
+    }
+});
+
+// Handle click for unmuting only
+document.addEventListener('click', () => {
+    if (videoPlayer.muted) {
+        videoPlayer.muted = false;
+        clickOverlay.classList.add('hidden');
+    }
+});
+
+
+// Lägg till detta efter din befintliga error handler
+videoPlayer.addEventListener('loadstart', () => {
+    console.log('Video loading started');
+    console.log('Current source:', videoPlayer.currentSrc);
+});
+
+videoPlayer.addEventListener('loadedmetadata', () => {
+    console.log('Video metadata loaded');
+    console.log('Duration:', videoPlayer.duration);
+    console.log('Video size:', videoPlayer.videoWidth, 'x', videoPlayer.videoHeight);
+});
+
+// Testa om filen finns tillgänglig
+async function checkVideoFile(url) {
+    try {
+        const response = await fetch(url);
+        console.log('Video file check:', url, response.status, response.statusText);
+        if (!response.ok) {
+            console.error('Video file not found or not accessible');
+        }
+    } catch (error) {
+        console.error('Error checking video file:', error);
+    }
+}
+
+// Kontrollera båda videofiler
+checkVideoFile('swe2.webm');
+checkVideoFile('eng2.webm');
+
+
+        
+// Error handling for video
+videoPlayer.addEventListener('error', (e) => {
+    console.error('Video error:', e);
+    loadingOverlay.classList.remove('hidden');
+    loadingOverlay.textContent = 'Ett fel uppstod vid uppspelning av videon';
+});
+
+// Initial sync and start periodic sync
+syncWithServer();
+// More frequent updates for smoother sync
+setInterval(syncWithServer, 200);
+    </script>
+
+
+
+
+
+<script>
+// Reset state tracking
+let isResetting = false;
+let resetCheckInterval = null;
+
+async function handlePageReset() {
+    if (isResetting) return;
+    
+    try {
+        isResetting = true;
+        
+        // Get DOM elements
+        const video = document.getElementById('videoPlayer');
+        const landing = document.getElementById('gokart-landing');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        const clickOverlay = document.getElementById('clickOverlay');
+        
+        if (!video || !landing || !loadingOverlay || !clickOverlay) {
+            console.error('Missing required DOM elements');
+            return;
+        }
+        
+        // Reset video state
+        try {
+            if (!video.paused) {
+                await video.pause();
+            }
+            
+            // Update server state first
+            await updateServerState({
+                isPlaying: false,
+                currentTime: 0
+            });
+            
+            video.currentTime = 0;
+            forceVideoCleanup();
+            
+            // Reset last state
+            lastState = {
+                currentVideo: null,
+                isPlaying: false,
+                volume: 100,
+                currentTime: 0,
+                autoplayRequested: false
+            };
+            
+        } catch (videoError) {
+            console.error('Error resetting video:', videoError);
+        }
+        
+        // Update UI
+        landing.classList.remove('hidden');
+        loadingOverlay.classList.add('hidden');
+        clickOverlay.classList.add('hidden');
+        
+    } catch (error) {
+        console.error('Reset error:', error);
+    } finally {
+        setTimeout(() => {
+            isResetting = false;
+        }, 100); // Small delay to ensure state is cleaned up
+    }
+}
+
+
+// Check for reset signal from server
+async function checkReset() {
+    if (isResetting) return;
+    
+    try {
+        const response = await fetch('http://localhost:3000/checkReset');
+        if (!response.ok) {
+            throw new Error(`Server error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        if (data && data.shouldReset) {
+            await handlePageReset();
+        }
+    } catch (error) {
+        console.error('Reset check failed:', error);
+    }
+}
+
+// Start reset checking
+function startResetCheck() {
+    if (resetCheckInterval) {
+        clearInterval(resetCheckInterval);
+    }
+    resetCheckInterval = setInterval(checkReset, 100);
+}
+
+// Cleanup for intervals
+function cleanup() {
+    if (resetCheckInterval) {
+        clearInterval(resetCheckInterval);
+        resetCheckInterval = null;
+    }
+}
+
+// Initialize on page load
+window.addEventListener('load', () => {
+    try {
+        handlePageReset();
+        startResetCheck();
+    } catch (error) {
+        console.error('Error during initialization:', error);
+    }
+});
+
+// Cleanup on page unload
+window.addEventListener('beforeunload', cleanup);
+window.addEventListener('unload', cleanup);
+
+// Start the reset check
+startResetCheck();
+</script>
+</body>
+</html>

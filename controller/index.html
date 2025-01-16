@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Controller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+    body {
+        background-color: rgb(33, 33, 33);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .title {
+        color: white;
+        font-size: 28px; /* Större text */
+        margin-bottom: 40px; /* Mer utrymme */
+        text-align: center;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    /* Touch-optimerade knappar */
+    .language-btn {
+        background-color: rgb(43, 181, 71);
+        border: none;
+        color: white;
+        min-height: 70px; /* Högre knappar */
+        min-width: 240px; /* Bredare knappar */
+        font-size: 24px; /* Större text */
+        border-radius: 15px; /* Mjukare hörn */
+        margin: 15px;
+        padding: 20px 40px;
+        transition: transform 0.2s, opacity 0.2s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .language-btn:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px; /* Större mellanrum */
+        align-items: center;
+    }
+
+    /* Admin Panel Styles */
+    #secretTrigger {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 80px; /* Större trigger-område */
+        height: 80px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    
+    #secretAdmin {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 25px; /* Mer padding */
+        transition: right 0.3s ease;
+        color: white;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+        overflow-y: auto;
+    }
+    
+    #secretAdmin.active {
+        right: 0;
+    }
+    
+    .admin-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .control-group {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px; /* Mer padding */
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+    
+    /* Touch-optimerade admin-knappar */
+    .btn-admin {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        color: white;
+        min-height: 60px; /* Högre knappar */
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 18px;
+        transition: all 0.2s;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .btn-admin:active {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn-admin:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
+    /* Touch-optimerad volymkontroll */
+    .volume-slider {
+        width: 100%;
+        height: 30px; /* Mycket högre för bättre touch */
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        -webkit-appearance: none;
+        margin: 15px 0;
+        padding: 0 15px;
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 40px; /* Större thumb */
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        margin-top: -5px; /* Centrerar thumb */
+    }
+    
+    .volume-slider::-webkit-slider-runnable-track {
+        height: 30px;
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+
+
+    .status-display {
+        color: white;
+        font-size: 1.2em; /* Större text */
+        margin: 15px 0;
+        padding: 20px;
+        background: rgba(43, 181, 71, 0.15);
+        border-radius: 12px;
+        border: 1px solid rgba(43, 181, 71, 0.3);
+    }
+
+    .status-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .status-item:last-child {
+        border-bottom: none;
+    }
+
+    .status-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 1.1em; /* Större text */
+    }
+
+    .status-value {
+        color: rgb(43, 181, 71);
+        font-weight: 500;
+        font-size: 1.1em; /* Större text */
+    }
+
+    .time-controls {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px; /* Större mellanrum */
+    }
+
+    /* Responsiva justeringar */
+    @media (min-width: 768px) {
+        .buttons-container {
+            flex-direction: row;
+            gap: 40px;
+        }
+        
+        .language-btn {
+            min-width: 260px; /* Något bredare på större skärmar */
+        }
+    }
+
+    /* Extra touch-optimeringar för mindre skärmar */
+    @media (max-width: 767px) {
+        .language-btn {
+            min-width: 280px;
+            min-height: 80px;
+            font-size: 26px;
+        }
+        
+        .btn-admin {
+            min-height: 70px;
+            font-size: 20px;
+        }
+        
+        .control-group {
+            padding: 30px;
+        }
+        
+        .volume-slider {
+            height: 40px;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+
+
+    .close-btn {
+    /* Center positioning */
+    display: block;
+    margin: 20px auto;
+    
+    /* Size and shape */
+    width: 200px;
+    height: 80px;
+    padding: 20px;
+    
+    /* Styling */
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 12px;  /* Slightly rounded corners */
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    
+    /* Effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    
+    /* Touch optimizations */
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Hover effect (for non-touch devices) */
+@media (hover: hover) {
+    .close-btn:hover {
+        background-color: #444;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        transform: translateY(-2px);
+    }
+}
+
+/* Active/Pressed state */
+.close-btn:active {
+    background-color: #222;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+/* Focus state */
+.close-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(51, 51, 51, 0.3);
+}
+
+/* Disabled state */
+.close-btn:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+</style>
+</head>
+<body>
+    <div class="title">Please select language</div>
+    
+    <div class="buttons-container">
+        <button class="language-btn" onclick="changeLanguage('swe')">Svenska</button>
+        <button class="language-btn" onclick="changeLanguage('eng')">English</button>
+    </div>
+
+    <!-- Admin Panel Elements -->
+    <div id="secretTrigger"></div>
+    
+    <div id="secretAdmin">
+        <button id="closeButton" class="close-btn" onclick="toggleAdminPanel()">Close</button>
+        <h4 class="mb-4">Admin Controls</h4>
+        
+        <div class="admin-controls">
+            <div class="status-display">
+                <div class="status-item">
+                    <span class="status-label">Språk:</span>
+                    <span class="status-value" id="languageStatus">Svenska</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Status:</span>
+                    <span class="status-value" id="playStatus">Pausad</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-label">Volym:</span>
+                    <span class="status-value" id="volumeStatus">100%</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <h6 class="mb-3">Språk</h6>
+                <div class="d-flex gap-2">
+                    <button class="btn-admin w-50" onclick="changeLanguage('swe')">Svenska</button>
+                    <button class="btn-admin w-50" onclick="changeLanguage('eng')">Engelska</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h6 class="mb-3">Uppspelning</h6>
+                <div class="d-flex gap-2">
+                    <button class="btn-admin w-50" onclick="playVideo()" id="playBtn">Spela</button>
+                    <button class="btn-admin w-50" onclick="pauseVideo()" id="pauseBtn">Pausa</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h6 class="mb-3">Volym</h6>
+                <input type="range" class="volume-slider" min="0" max="100" value="100" 
+                       oninput="updateVolume(this.value)" id="volumeSlider">
+                <div class="text-center mt-2" id="volumeDisplay">100%</div>
+            </div>
+
+            
+            
+            <div class="control-group">
+                <h6 class="mb-3">Spola</h6>
+                <div class="time-controls mb-2">
+                    <button class="btn-admin" onclick="seekVideo(-30)">-30s</button>
+                    <button class="btn-admin" onclick="seekVideo(-10)">-10s</button>
+                </div>
+                <div class="time-controls">
+                    <button class="btn-admin" onclick="seekVideo(10)">+10s</button>
+                    <button class="btn-admin" onclick="seekVideo(30)">+30s</button>
+                </div>
+            </div>
+            <div class="control-group">
+                <h6 class="mb-3">Reset</h6>
+                <button class="btn-admin w-100" onclick="resetVideo()">Reset Video</button>
+            </div>           
+        </div>
+    </div>
+
+    <script>
+async function resetVideo() {
+    try {
+        await fetch('http://localhost:3000/triggerReset', {
+            method: 'POST'
+        });
+    } catch (error) {
+        console.error('Failed to reset:', error);
+    }
+}
+
+    </script>
+
+    <script>
+// State Management
+let currentState = {
+    currentVideo: 1,
+    isPlaying: false,
+    volume: 100,
+    currentTime: 0,
+    system_status: 'healthy'
+};
+
+// Cache DOM elements
+const elements = {
+    secretTrigger: document.getElementById('secretTrigger'),
+    secretAdmin: document.getElementById('secretAdmin'),
+    languageStatus: document.getElementById('languageStatus'),
+    playStatus: document.getElementById('playStatus'),
+    volumeStatus: document.getElementById('volumeStatus'),
+    volumeDisplay: document.getElementById('volumeDisplay'),
+    playBtn: document.getElementById('playBtn'),
+    pauseBtn: document.getElementById('pauseBtn'),
+    volumeSlider: document.getElementById('volumeSlider')
+};
+
+// Admin Panel Variables
+let clickCount = 0;
+let clickTimer = null;
+
+// Server Communication Settings
+let lastServerContact = Date.now();
+let isReconnecting = false;
+let reconnectAttempts = 0;
+const MAX_RECONNECT_ATTEMPTS = 5;
+const RETRY_DELAY = 2000;
+
+// Toast Notification System
+const toastQueue = [];
+let isShowingToast = false;
+let lastToastTime = 0;
+const TOAST_COOLDOWN = 1000; // Minimum time between toasts
+
+function showToast(title, icon = 'success') {
+    const currentTime = Date.now();
+    if (currentTime - lastToastTime < TOAST_COOLDOWN) {
+        return;
+    }
+    
+    if (toastQueue.some(toast => toast.title === title)) {
+        return;
+    }
+
+    toastQueue.push({ title, icon });
+    if (!isShowingToast) {
+        processToastQueue();
+    }
+}
+
+async function processToastQueue() {
+    if (toastQueue.length === 0) {
+        isShowingToast = false;
+        return;
+    }
+
+    isShowingToast = true;
+    const { title, icon } = toastQueue.shift();
+    lastToastTime = Date.now();
+
+    await Swal.fire({
+        toast: true,
+        position: 'bottom-end',
+        title: title,
+        icon: icon,
+        timer: 1500,
+        timerProgressBar: true,
+        showConfirmButton: false,
+        background: '#333',
+        color: '#fff'
+    });
+
+    processToastQueue();
+}
+
+// Server Communication
+async function makeServerRequest(endpoint, method = 'GET', data = null) {
+    let lastError;
+    const maxRetries = 3;
+
+    for (let attempt = 0; attempt < maxRetries; attempt++) {
+        try {
+            const options = {
+                method,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            if (data) {
+                options.body = JSON.stringify(data);
+            }
+
+            const response = await fetch(`http://localhost:3000/${endpoint}`, options);
+            
+            if (!response.ok) {
+                throw new Error(`Server returned ${response.status}`);
+            }
+
+            lastServerContact = Date.now();
+            reconnectAttempts = 0;
+            isReconnecting = false;
+            
+            return await response.json();
+        } catch (error) {
+            lastError = error;
+            console.error(`Attempt ${attempt + 1} failed:`, error);
+            
+            if (attempt < maxRetries - 1) {
+                await new Promise(resolve => setTimeout(resolve, RETRY_DELAY));
+            }
+        }
+    }
+
+    throw lastError;
+}
+
+// Admin Panel Toggle
+elements.secretTrigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    clickCount++;
+    
+    if (clickTimer) clearTimeout(clickTimer);
+    
+    clickTimer = setTimeout(() => {
+        if (clickCount >= 3) {
+            toggleAdminPanel();
+        }
+        clickCount = 0;
+    }, 800);
+});
+
+function toggleAdminPanel() {
+    elements.secretAdmin.classList.toggle('active');
+}
+
+// Volume Control
+let volumeUpdateTimer = null;
+let lastVolumeUpdate = null;
+const VOLUME_UPDATE_DELAY = 500;
+
+async function updateVolume(value) {
+    const volumeValue = parseInt(value);
+    if (isNaN(volumeValue) || volumeValue < 0 || volumeValue > 100) {
+        return;
+    }
+
+    elements.volumeDisplay.textContent = `${volumeValue}%`;
+    elements.volumeStatus.textContent = `${volumeValue}%`;
+
+    if (volumeUpdateTimer) {
+        clearTimeout(volumeUpdateTimer);
+    }
+
+    volumeUpdateTimer = setTimeout(async () => {
+        if (lastVolumeUpdate !== volumeValue) {
+            try {
+                await makeServerRequest('updateState', 'POST', { volume: volumeValue });
+                lastVolumeUpdate = volumeValue;
+                if (Math.abs(volumeValue - (lastVolumeUpdate || 100)) >= 10) {
+                    showToast(`Volym: ${volumeValue}%`);
+                }
+            } catch (error) {
+                console.error('Volume update error:', error);
+                showToast('Kunde inte uppdatera volym', 'error');
+            }
+        }
+    }, VOLUME_UPDATE_DELAY);
+}
+
+
+
+let languageChangeInProgress = false;
+
+async function changeLanguage(lang) {
+    if (languageChangeInProgress) return;
+    
+    try {
+        languageChangeInProgress = true;
+        
+        const result = await makeServerRequest('updateState', 'POST', {
+            currentVideo: lang === 'swe' ? 1 : 2,
+            isPlaying: true,
+            currentTime: 0,
+            timestamp: Date.now() // Force immediate update
+        });
+
+        if (result.success) {
+            showToast(lang === 'swe' ? 'Svenska vald!' : 'English selected!');
+            
+            // Update local state immediately
+            updateUI({
+                currentVideo: lang === 'swe' ? 1 : 2,
+                isPlaying: true,
+                currentTime: 0,
+                volume: currentState.volume,
+                system_status: currentState.system_status
+            });
+        }
+    } catch (error) {
+        console.error('Language change error:', error);
+        showToast('Kunde inte byta språk', 'error');
+    } finally {
+        // Clear the language change lock after a delay
+        setTimeout(() => {
+            languageChangeInProgress = false;
+        }, 500);
+    }
+}
+
+
+
+
+
+
+async function playVideo() {
+    try {
+        await makeServerRequest('updateState', 'POST', { isPlaying: true });
+        showToast('Video startad');
+        updateUI({ ...currentState, isPlaying: true });
+    } catch (error) {
+        console.error('Play error:', error);
+        showToast('Kunde inte starta videon', 'error');
+    }
+}
+
+async function pauseVideo() {
+    try {
+        await makeServerRequest('updateState', 'POST', { isPlaying: false });
+        showToast('Video pausad');
+        updateUI({ ...currentState, isPlaying: false });
+    } catch (error) {
+        console.error('Pause error:', error);
+        showToast('Kunde inte pausa videon', 'error');
+    }
+}
+
+async function seekVideo(seconds) {
+    try {
+        const state = await makeServerRequest('getState');
+        const newTime = Math.max(0, (state.currentTime || 0) + seconds);
+        
+        await makeServerRequest('updateState', 'POST', { 
+            currentTime: newTime
+        });
+        
+        if (Math.abs(seconds) >= 30) {
+            showToast(`Spolat ${seconds > 0 ? 'framåt' : 'bakåt'} ${Math.abs(seconds)}s`);
+        }
+    } catch (error) {
+        console.error('Seek error:', error);
+        showToast('Kunde inte spola', 'error');
+    }
+}
+
+// UI Updates
+function updateUI(state) {
+    if (!state || typeof state !== 'object') return;
+
+    const validatedState = {
+        currentVideo: Number(state.currentVideo) === 1 || Number(state.currentVideo) === 2 ? 
+            Number(state.currentVideo) : currentState.currentVideo,
+        isPlaying: Boolean(state.isPlaying),
+        volume: Number(state.volume) >= 0 && Number(state.volume) <= 100 ? 
+            Number(state.volume) : currentState.volume,
+        currentTime: Number(state.currentTime) >= 0 ? 
+            Number(state.currentTime) : currentState.currentTime,
+        system_status: state.system_status || 'healthy'
+    };
+
+    elements.languageStatus.textContent = validatedState.currentVideo === 1 ? 'Svenska' : 'Engelska';
+    elements.playStatus.textContent = validatedState.isPlaying ? 'Spelar' : 'Pausad';
+    elements.volumeStatus.textContent = `${validatedState.volume}%`;
+    elements.volumeDisplay.textContent = `${validatedState.volume}%`;
+
+    elements.playBtn.disabled = validatedState.isPlaying;
+    elements.pauseBtn.disabled = !validatedState.isPlaying;
+    elements.volumeSlider.value = validatedState.volume;
+
+    if (validatedState.system_status !== 'healthy' && 
+        validatedState.system_status !== currentState.system_status) {
+        showToast('Systemvarning: Prestandan kan vara påverkad', 'warning');
+    }
+
+    currentState = validatedState;
+}
+
+// State Polling
+async function checkState() {
+    try {
+        const state = await makeServerRequest('getState');
+        
+        if (isReconnecting) {
+            isReconnecting = false;
+            showToast('Anslutning återupprättad!', 'success');
+        }
+
+        if (JSON.stringify(state) !== JSON.stringify(currentState)) {
+            updateUI(state);
+        }
+    } catch (error) {
+        console.error('State check failed:', error);
+        
+        const timeSinceLastContact = Date.now() - lastServerContact;
+        if (timeSinceLastContact > 5000 && !isReconnecting) {
+            isReconnecting = true;
+            reconnectAttempts++;
+            
+            if (reconnectAttempts <= MAX_RECONNECT_ATTEMPTS) {
+                showToast('Tappad anslutning - återansluter...', 'warning');
+            } else {
+                showToast('Kunde inte återansluta - kontrollera din uppkoppling', 'error');
+            }
+        }
+    }
+
+    const nextInterval = isReconnecting ? 2000 : 200;
+    setTimeout(checkState, nextInterval);
+}
+
+// Replace the existing touch event handlers with this improved version
+document.addEventListener('touchend', function(event) {
+    // Don't prevent default for all touch events
+    const target = event.target;
+    if (!target.classList.contains('volume-slider')) {
+        event.preventDefault();
+        target.click();
+    }
+}, false);
+
+// Remove the generic button touch handlers
+// Instead, add specific handling for the close button
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+});
+
+closeBtn.addEventListener('touchend', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    toggleAdminPanel();
+});
+
+// Modify the toggleAdminPanel function to ensure clean state
+function toggleAdminPanel() {
+    // Add a small delay to ensure clean state
+    setTimeout(() => {
+        elements.secretAdmin.classList.toggle('active');
+    }, 10);
+}
+
+// Keep the volume slider touch handling
+const volumeSlider = document.getElementById('volumeSlider');
+volumeSlider.addEventListener('touchstart', function(e) {
+    e.stopPropagation();
+});
+volumeSlider.addEventListener('touchmove', function(e) {
+    e.stopPropagation();
+});
+
+// Initialize State Polling
+checkState();
+    </script>
+</body>
+</html>
